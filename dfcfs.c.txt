@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+
+    int RQ[100],TotalHeadMoment=0,initial,i,n;
+
+    printf("\n ENTER THE NUMBER OF REQUEST:\n");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++)
+    {
+        printf("\n ENTER THE SEQUENCE OF THE REQUEST:");
+        scanf("%d",&RQ[i]);
+    }
+
+    printf("\n ENTER THE INTIAL HEAD POSITION :");
+    scanf("%d",&initial);
+
+
+    for(i=0;i<n;i++)
+    {
+        TotalHeadMoment=TotalHeadMoment+abs(RQ[i]-initial);
+        initial=RQ[i];
+    }
+
+    printf("\n ENTER THE TOTAL HEAD MOMENT :%d",TotalHeadMoment);
+
+    return 0;
+}
